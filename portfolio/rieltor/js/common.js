@@ -10,7 +10,7 @@ $(function() {
 			url: "../mail.php", //Change
 			data: th.serialize()
 		}).done(function() {
-			alert("Thank you!");
+			.parent_block.style.display="flex"
 			setTimeout(function() {
 				// Done Functions
 				th.trigger("reset");

@@ -58,7 +58,7 @@
 						<input type="hidden" name="form_subject" value="Form Subject">
 						<!-- END Hidden Required Fields -->
 
-						<input type="text" name="Phone" class="phone-input__header" placeholder="Ваш номер телефона">
+						<input type="text" pattern="[+0-9]{7,13}" name="Phone" class="phone-input__header" placeholder="Ваш номер телефона" required="">
 						<button>Заказать звонок</button>
 					</form>
 					<p class="main-user">Ерболат Кужугалдинов,риэлтор-эксперт г. Алматы, автор книги
@@ -141,7 +141,7 @@
 							<input type="hidden" name="form_subject" value="Form Subject">
 							<!-- END Hidden Required Fields -->
 
-							<input type="text" name="Phone" placeholder="Ваш номер телефона">
+							<input type="text"  pattern="[+0-9]{7,13}" name="Phone" placeholder="Ваш номер телефона" required="">
 							<button>Заказать звонок</button>
 						</div>
 					</form>
@@ -237,7 +237,7 @@
 							<input type="hidden" name="form_subject" value="Form Subject">
 							<!-- END Hidden Required Fields -->
 
-							<input type="text" name="Phone" placeholder="Ваш номер телефона">
+							<input type="text"  pattern="[+0-9]{7,13}" name="Phone" placeholder="Ваш номер телефона" required="">
 							<button>Попробовать бесплатно</button>
 						</div>
 					</form>
@@ -259,8 +259,9 @@
 			</div>
 		</div>
 	</footer>
-
+	<div class="parent_block"><div class="pop-up_form" style="background-image: url(img/call.jpg);"><span class="message"><span class="thanks">Спасибо, что обратились ко мне. </span><br/> <span class="call"> В ближайшее время я свяжусь с вами!</span></span><br/><button class="button_close">Ок</button></div></div>
 	<link rel="stylesheet" href="css/main.min.css">
 	<script src="js/scripts.min.js"></script>
+	<script src="js/simple.js"></script>
 </body>
 </html>

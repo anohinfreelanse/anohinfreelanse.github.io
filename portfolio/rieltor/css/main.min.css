@@ -323,6 +323,8 @@ hr {
   overflow: visible;
   clip: auto; }
 
+
+
 [role="button"] {
   cursor: pointer; }
 
@@ -1096,7 +1098,6 @@ header.main__header {
     background: #ffffff;
     width: 470px;
     height: 180px;
-    z-index: 1;
     position: absolute;
     color: #625772;
     font-family:"OpenSans-italic";
@@ -1439,6 +1440,63 @@ vertical-align:middle;
 .bg-foto {
   height: 760px;
 }
+
+.parent_block {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center; 
+  overflow: auto;   
+  line-height: 0.7px;
+
+}
+
+.button_close {
+color: #fff;
+text-transform: uppercase;
+display: block;
+border: none;
+width: 40%;
+height: 50px;
+border-radius: 3px;
+margin-top: 25px;
+background-color: #f38181;
+font-size: 20px;
+display: inline-block;
+margin-top: 160px;
+}
+.pop-up_form {
+  position:fixed;
+  background-color: #153862;
+  display: inline-block;
+  white-space: normal;
+  vertical-align: middle;
+  text-align: left;
+  width: 60%;
+  height: 400px;
+  color: #ffffff;
+  text-align: center;
+  font-size:35px;
+  font-family: "OpenSans-bold";
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.thanks {
+  margin-top:7%;
+  display:inline-block;
+  text-align: center;
+}
+
+.call {
+  display:inline-block;
+  margin-top:7%;
+  text-align:center;
+}
 section.reviews h2.title p {
   margin-top: 0px;
   margin-bottom: 10px;
@@ -1559,6 +1617,21 @@ section.reviews h2.title p {
         vertical-align: top;
         padding-top:8px;
       }
+  .pop-up_form {
+    height:300px;
+    font-size: 25px;
+  }
+
+  .button_close {
+    width:90%;
+    margin-top: 100px;
+  }
+  .thanks{
+    margin-top:40px;
+  }
+  .call{
+    margin-top:50px;
+  }
 }
 }
 
@@ -1591,6 +1664,11 @@ section.reviews h2.title p {
     letter-spacing: 1px;
     font-size: 18px;
   }
+    .pop-up_form {
+    height:300px;
+    font-size: 20px;
+    width:90%;
+  }
   br {content: ""}
   
   section.reviews .small img {
@@ -1605,8 +1683,12 @@ section.reviews h2.title p {
 
 
 
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+ body button.button-close {
+    width:80%;
+  }
  section.reviews h2.title {
   margin-bottom: 50px;
  }
@@ -1678,6 +1760,25 @@ section.reviews h2.title p {
   footer.main-footer .phone img{
     width: 20px;
   }
+
+  .call {
+    font-size: 14px;
+    margin-top: 35px;
+  }
+
+   .thanks {
+    font-size: 14px;
+  }
+  .pop-up_form {
+    height:200px;
+    font-size: 14px;
+    width:90%;
+  }
+
+  .button_close{
+    margin-top: 45px;
+  }
+
 }
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
