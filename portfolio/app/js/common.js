@@ -14,7 +14,7 @@ $(function() {
         fade: true
 	
 	});
-    $("form").submit(function() { //Change
+    $(".last-form").submit(function() { //Change
         var th = $(this);
         $.ajax({
             type: "POST",
