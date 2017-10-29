@@ -14,7 +14,7 @@ $(function() {
         fade: true
 	
 	});
-    $(".contact_form").submit(function() { //Change
+    $("form").submit(function() { //Change
         var th = $(this);
         $.ajax({
             type: "POST",
