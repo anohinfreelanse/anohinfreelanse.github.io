@@ -537,13 +537,23 @@
 
 		</div>
 	</div>
-	<script src="js/scripts.min.js"></script>
-	<script type="text/javascript" src="libs/slick/slick.min.js"></script>
-	<script type="text/javascript" src="js/maps.js"></script>
-			<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCtIqCQ7ny-5hKr2-FGFDip_xUoPMuMOE&callback=initMap">
+	<script>
+      function initMap() {
+        var uluru = {lat: 55.76941307, lng: 37.64485400};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
     </script>
-	<script type="text/javascript" src="js/share.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAa0_Ur5pW0Nvjl4q6OS1G7hMEZOFea7No&callback=initMap"
+  async defer>
+</script>
+	<script src="js/scripts.min.js"></script>
 
 </body>
 </html>
