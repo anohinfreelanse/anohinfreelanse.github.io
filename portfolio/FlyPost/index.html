@@ -16,6 +16,7 @@
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 	<link rel="stylesheet" href="css/main.min.css">
 
@@ -26,11 +27,53 @@
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
+
 </head>
 
 <body>
+<div class="contact-wrapper">
+		<div class="sent-message sent-message-right">
+			<p class="send_message">Отправьте ваши данные для совместного сотрудничества</p>
 
-	<header>
+			<form class="contact_form" action="contact-form.php" method="post">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="">
+				<input type="hidden" name="admin_email" value="">
+				<input type="hidden" name="form_subject" value="">
+				<!-- END Hidden Required Fields -->
+				<p>
+					<label for="name"></label>
+					<input type="text"  name="name" class="input-name" placeholder="&#xf007;  Имя" required />
+				</p>
+				<p>
+					<label for="email"></label>
+					<input type="email" name="email" class="input-email" placeholder="  Страна" required />
+				</p>
+
+				<p>
+					<label for="tel"></label>
+					<input type="tel" name="tel" class="input-tel" placeholder="  Количество отправлений в сутки ___ в месяц ___" required />
+				</p>
+				<p>
+					<label for="tel"></label>
+					<input type="tel" name="tel" class="input-tel" placeholder="  Вид бизнеса" required />
+				</p>
+				<p>
+					<label for="tel"></label>
+					<input type="tel" name="tel" class="input-tel" placeholder="  Почта" required />
+				</p>
+				<p class="last-p">
+					<label for="tel"></label>
+					<input type="tel" name="tel" class="input-tel" pattern="[+0-9]{7,13}" placeholder="  Телефон" required />
+				</p>
+				<button class=form-button>ОТПРАВИТЬ</button>
+
+			</form>
+
+		</div>
+	</div>
+
+	<header class="header">
 	 	<div class="wrapper">
 	 		<div class = "container-fluid clearfix">	
 			<div class = "row">
@@ -43,7 +86,7 @@
 	 		<div class="sign_up">
 	 			<ul>
 	 				<li><a class="entry"></a><a href="#">ВХОД</a></li>
-	 				<li><a class="join"></a><a href="#">ПОДКЛЮЧИТЬСЯ</a></li>
+	 				<li><a class="join"></a><a class="join1" href="#cooperation">ПОДКЛЮЧИТЬСЯ</a></li>
 	 			</ul>
 	 		</div>
 	 		</div>
@@ -55,7 +98,7 @@
 	 				<li><a class="advantage" href="#advantage">ПРИЕМУЩЕСТВА</a></li>
 	 				<li><a class="geography" href="#geography">ГЕОГРАФИЯ</a></li>
 	 				<li><a class="cooperation" href="cooperation">СОТРУДНИЧЕСТВО</a></li>
-	 				<li><a href="#">КОНТАКТЫ</a></li>
+	 				<li><a href="contacts.html">КОНТАКТЫ</a></li>
 	 			</ul>
 	 		</div>
 	 		</div>
@@ -201,7 +244,7 @@
 				</span></div>
 			</div>
 			<div class="footer-join">
-			<button>ПОДКЛЮЧИТЬСЯ</button>
+			<button class="connect">ПОДКЛЮЧИТЬСЯ</button>
 			<img src="img/oval.png" alt="oval"></div></div>
 
 		
