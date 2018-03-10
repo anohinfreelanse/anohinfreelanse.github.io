@@ -16,8 +16,7 @@
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
-	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.min.css">
 
 	<!-- Chrome, Firefox OS and Opera -->
@@ -33,6 +32,7 @@
 <body>
 <div class="contact-wrapper">
 		<div class="sent-message sent-message-right">
+			<button class="b-exit"></button>
 			<p class="send_message">Отправьте ваши данные для совместного сотрудничества</p>
 
 			<form class="contact_form" action="contact-form.php" method="post">
@@ -74,24 +74,21 @@
 	</div>
 
 	<header class="header">
-	 	<div class="wrapper">
+	 	<div class="nav_header">
 	 		<div class = "container-fluid clearfix">	
 			<div class = "row">
 			<div class = "col-lg-2"></div>
 	 		<div class = "col-lg-9 col-md-12 col-xs-12 line-height">
-	 		<div class="col-lg-2 col-md-2 col-xs-3">
+	 		<div class="col-lg-2 col-md-2 col-sm-3">
 	 		<a href="#"><div class="logo"></div></a>
 	 		</div>
-	 		<div class="col-lg-3 col-lg-push-7 col-md-3 col-md-push-7 col-xs-9">
-	 		<div class="sign_up">
-	 			<ul>
-	 				<li><a class="entry"></a><a href="#">ВХОД</a></li>
-	 				<li><a class="join"></a><a class="join1" href="#cooperation">ПОДКЛЮЧИТЬСЯ</a></li>
-	 			</ul>
-	 		</div>
-	 		</div>
-	 		<div class="col-lg-7 col-lg-pull-3 col-md-7 col-md-pull-3 col-xs-3">
-	 		<a href="#" id="touch-menu">МЕНЮ</a>
+	 		<div class="col-lg-7 col-lg-push-0 col-md-7 col-sm-1">
+	 		<a id="touch-menu"><div class="container-button" onclick="myFunction(this)">
+  				<div class="bar1"></div>
+  				<div class="bar2"></div>
+  				<div class="bar3"></div>
+				</div>
+			</a>
 	 		<div class="nav menu">
 	 			<ul>
 	 				<li><a href="#">ГЛАВНАЯ</a></li>
@@ -102,6 +99,20 @@
 	 			</ul>
 	 		</div>
 	 		</div>
+	 		<div class="col-lg-3 col-lg-pull-0 col-md-3 col-sm-7">
+	 		<div class="sign_up">
+	 			<ul>
+	 				<li><a class="entry"></a><a href="#">ВХОД</a></li>
+	 				<li><a class="join"></a><a class="join1" href="#cooperation">ПОДКЛЮЧИТЬСЯ</a></li>
+	 			</ul>
+	 		</div>
+	 		</div>
+	 		</div>
+	 		</div>
+	 		</div>
+	 		</div>
+	 		<div class = "container-fluid clearfix height_line">	
+			<div class = "row">
 	 		<div class="trek">
 	 			<div class="search">
 	 				<input type="search" name="sum" placeholder="ВВЕДИТЕ ТРЕКИНГ НОМЕР">
@@ -116,7 +127,6 @@
 	 		</div>
 	 	</div>
 	 	<div class="mouse"></div>
-		</div>
 		</div>
 	</header>
 	<div class="base">
@@ -140,20 +150,21 @@
 			</div>
 	<div class="plus">
 	<div class = "container">	
-			<div class = "row row1">
+			<div class = "row">
+			<div class = " row1">
 			<div class = "col-lg-12">
 		<div class="plus-block zabor"><div class="icon i-zabor"></div><span><div class="h4">ЗАБОР ТОВАРА</div> с Вашего склада и доставка до транспортной компании</span></div>
 		<div class="plus-block onvet"><div class="icon i-onvet"></div><span><div class="h4">ОТВЕТСТВЕННОЕ ХРАНЕНИЕ</div>Ваших товаров</span></div>
 		<div class="plus-block kompl"><div class="icon i-kompl"></div><span><div class="h4">КОМПЛЕКТАЦИЯ ТОВАРОВ</div>упаковка, стикеровка</span></div>
 		<div class="plus-block dost"><div class="icon i-dost"></div><span><div class="h4">ДОСТАВКА</div></span>ваших заказов по всех РФ</div></div></div>
-		<div class = "row row2">
+		<div class = "row2">
 			<div class = "col-lg-12">
 		<div class="plus-block perechis"><div class="icon i-perechis"></div><span><div class="h4">ПЕРЕЧИСЛЕНИЕ ДЕНЕГ</div>за заказы</span></div>
 		<div class="plus-block raschet"><div class="icon i-raschet"></div><span><div class="h4">РАСЧЕТНО-КАССОВОЕ</div></span>обслуживание</div>
 		<div class="plus-block opis"><div class="icon i-opis"></div><span></span><div class="h4">ОПИСАНИЕ И 3D СЪЕЬКА</div>вашиих товаров</div>
 		<div class="plus-block razmesch"><div class="icon i-razmesch"></div><span><div class="h4">РАЗМЕЩЕНИЕ ТОВАРОВ</div></span>на AliExpress</div>
 	</div>
-	</div></div></div>
+	</div></div></div></div>
 	<a id="geography"></a>
 	<div class="geo">
 		<img src="img/aircraft.png" alt="aitcraft">
@@ -262,7 +273,9 @@
 
 		
 	</footer>
-	
+	<script>function myFunction(x) {
+      x.classList.toggle("change");
+  }</script>
 	<script src="js/scripts.min.js"></script>
 
 </body>
