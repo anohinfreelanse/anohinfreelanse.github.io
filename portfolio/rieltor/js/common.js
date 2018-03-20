@@ -10,6 +10,7 @@ $(function() {
 			url: "../mail.php", //Change
 			data: th.serialize()
 		}).done(function() {
+			window.location.href = "../info.html",
 			.parent_block.style.display="flex"
 			setTimeout(function() {
 				// Done Functions

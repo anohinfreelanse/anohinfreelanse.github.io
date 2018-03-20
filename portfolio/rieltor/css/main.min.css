@@ -875,6 +875,20 @@ hr {
 
 .affix {
   position: fixed; }
+/*info new*/
+.info-wrapper{
+	background-image: url(../img/header-bg.png);
+	background-position: center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	display: block;
+}
+.info-wrapper h3 a{
+	text-decoration: none;
+	color: #fff;
+}
 
 @-ms-viewport {
   width: device-width; }
