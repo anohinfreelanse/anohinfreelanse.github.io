@@ -1,41 +1,143 @@
 $(function() {
-	
+
+$('.glavn1').on('click', function(e){
+  $('html,body').stop().animate({ scrollTop: $('#glavn1').offset().top }, 1000);
+  e.preventDefault();
+});
+$('.action1').on('click', function(e){
+  $('html,body').stop().animate({ scrollTop: $('#action1').offset().top }, 1000);
+  e.preventDefault();
+});
+$('.adventage1').on('click', function(e){
+  $('html,body').stop().animate({ scrollTop: $('#adventage1').offset().top }, 1000);
+  e.preventDefault();
+});
+$('.galerey1').on('click', function(e){
+  $('html,body').stop().animate({ scrollTop: $('#galerey1').offset().top }, 1000);
+  e.preventDefault();
+});
+$('.nature1').on('click', function(e){
+  $('html,body').stop().animate({ scrollTop: $('#nature1').offset().top }, 1000);
+  e.preventDefault();
+});
+
 $(document).ready(function(){
-			var touch = $('#touch-menu');
-		    var menu = $('.nav');
+$('a[href^="descrip.html#about1"]').bind('click.smoothscroll',function (e) {
+e.preventDefault();
 
-  $(touch).click(function(){
-    $(menu).animate({
-      width: "toggle"
-    });
-  });
+var target = this.hash,
+$target = $(target);
+$('html, body').stop().animate({
+'scrollTop': $target.offset().top
+}, 600, 'swing', function () {
+return window.location.hash = target || window.location = || "http://localhost:3000/descrip.html#about1"
+});
+});
+$('a[href^="descrip.html#infra1"]').bind('click.smoothscroll',function (e) {
+e.preventDefault();
 
-		    $(window).resize(function(){
-		        var wid = $(window).width();
-		        if(wid > 992 && menu.is(':hidden')) {
-		            menu.removeAttr('style');
-		        }
-		    });
-		});
-$('.m-how').on('click', function(e){
-  $('html,body').stop().animate({ scrollTop: $('#m_how').offset().top }, 1000);
-  e.preventDefault();
+var target = this.hash,
+$target = $(target);
+
+$('html, body').stop().animate({
+'scrollTop': $target.offset().top
+}, 600, 'swing', function () {
+window.location.hash = target;
 });
-$('.m-why').on('click', function(e){
-  $('html,body').stop().animate({ scrollTop: $('#m_why').offset().top }, 1000);
-  e.preventDefault();
 });
-$('.m-tar').on('click', function(e){
-  $('html,body').stop().animate({ scrollTop: $('#m_tar').offset().top }, 1000);
-  e.preventDefault();
+$('a[href^="descrip.html#aktiv1"]').bind('click.smoothscroll',function (e) {
+e.preventDefault();
+
+var target = this.hash,
+$target = $(target);
+
+$('html, body').stop().animate({
+'scrollTop': $target.offset().top
+}, 600, 'swing', function () {
+window.location.hash = target;
 });
-$('.m-calc').on('click', function(e){
-  $('html,body').stop().animate({ scrollTop: $('#m_calc').offset().top }, 1000);
-  e.preventDefault();
 });
-$('.norm-kol').on('click', function(e){
-  $('html,body').stop().animate({ scrollTop: $('#norm-kol').offset().top }, 1000);
-  e.preventDefault();
+$('a[href^="descrip.html#komunik1"]').bind('click.smoothscroll',function (e) {
+e.preventDefault();
+
+var target = this.hash,
+$target = $(target);
+
+$('html, body').stop().animate({
+'scrollTop': $target.offset().top
+}, 600, 'swing', function () {
+window.location.hash = target;
+});
+});
+$('a[href^="descrip.html#shema1"]').bind('click.smoothscroll',function (e) {
+e.preventDefault();
+
+var target = this.hash,
+$target = $(target);
+
+$('html, body').stop().animate({
+'scrollTop': $target.offset().top
+}, 600, 'swing', function () {
+window.location.hash = target;
+});
+});
+$('a[href^="promotion.html#koncep1"]').bind('click.smoothscroll',function (e) {
+e.preventDefault();
+
+var target = this.hash,
+$target = $(target);
+
+$('html, body').stop().animate({
+'scrollTop': $target.offset().top
+}, 600, 'swing', function () {
+window.location.hash = target;
+});
+});
+
+$('a[href^="promotion.html#blago1"]').bind('click.smoothscroll',function (e) {
+e.preventDefault();
+
+var target = this.hash,
+$target = $(target);
+
+$('html, body').stop().animate({
+'scrollTop': $target.offset().top
+}, 600, 'swing', function () {
+window.location.hash = target;
+});
+});
+
+$('a[href^="action.html#acs1"]').bind('click.smoothscroll',function (e) {
+e.preventDefault();
+
+var target = this.hash,
+$target = $(target);
+
+$('html, body').stop().animate({
+'scrollTop': $target.offset().top
+}, 600, 'swing', function () {
+window.location.hash = target;
+});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
 
 });
