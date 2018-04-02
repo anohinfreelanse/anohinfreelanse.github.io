@@ -16,9 +16,13 @@ $(document).ready(function(){
 		            menu.removeAttr('style');
 		        }
 		    });
-
+        $('.a_remove').on('click', function(e){
+  menu.removeAttr('style');
+        $(".container-button").removeClass('change');
+});
 
 		});
+
 $('.m-how').on('click', function(e){
   $('html,body').stop().animate({ scrollTop: $('#m_how').offset().top }, 1000);
   e.preventDefault();
@@ -36,9 +40,10 @@ $('.m-calc').on('click', function(e){
   e.preventDefault();
 });
 $('.norm-kol').on('click', function(e){
-  $('html,body').stop().animate({ scrollTop: $('#norm-kol').offset().top }, 1000);
+  $('html,body').stop().animate({ scrollTop: $('#m_calc').offset().top }, 1000);
   e.preventDefault();
 });
+
 $(document).ready(function () {
   $('.sl').slick({
   dots: false,
@@ -66,9 +71,9 @@ $(document).ready(function () {
       }
     },
     {
-      breakpoint: 600,
+      breakpoint: 770,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 2
       }
     },
@@ -135,5 +140,22 @@ $(document).ready(function(){
             
         });
 
+});
+window.container = $(".sent-message-right");
+window.global_container = $(".contact-wrapper");
+global_container.hide();
+$(".connect").click(function(){
+  global_container.show();
+  container.show();
+});
+$(".b-exit").click(function(){
+  global_container.hide();
+  container.hide();
+});
+$(document).mouseup(function (e) {
+    if (global_container.has(e.target).length === 0){
+        global_container.hide();
+        container.hide();
+    }
 });
 });
