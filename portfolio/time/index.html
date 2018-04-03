@@ -51,9 +51,8 @@
 						<li class="li-number">+7(499)938-45-03</li>
 						<li><a class="m-how a_remove" href="#m_how">КАК ЭТО РАБОТАЕТ</a></li>
 						<li><a class="m-why a_remove" href="#m_why">ПОЧЕМУ МЫ</a></li>
-						<li><a class="m-tar a_remove" href="#m_tar">МЕНЮ И ТАРИФЫ</a></li>
-						<li class="last-li-menu"><a class="m-calc a_remove" href="#m_calc">КАЛЬКУЛЯТОР КАЛЛОРИЙ</a></li>
-						<li class="wrap-button-li connect"><button class="get-racion-menu">ПОДОБРАТЬ РАЦИОН</button></li>
+						<li><a class="m-tar a_remove" href="#m_tar">МЕНЮ И ЦЕНЫ</a></li>
+						<li class="wrap-button-li"><a href="#tarif" class="tarif a_remove"><button class="get-racion-menu">ТАРИФЫ</button></a></li>
 					</ul>
 				</nav>
 			</div>
@@ -406,6 +405,64 @@
   						<div class="sl__slide"><div class="img-for-slide for-slide25"></div><div class="text-m"><span class="opisanie">Капрезе</span><span class="zagolovok">УЖИН</span></div></div>
   						</div>
 					</div></div></div></div></div>
+<a id="tarif"></a>
+<div class="price">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xl-12">
+							<h1 class="h1">ЦЕНЫ</h1>
+						</div>
+						<div class="col-xl-4 col-lg-4">
+						<div class="price-block1 price-block">
+							<div class="price-iner text-center">
+								<div class="top-price">
+									<div class="kalendar"></div>
+									<span class="during">ДЕНЬ</span></div>
+									<div class="block-one">
+									<div class="foto-girl-one"></div><span class="menu-on-one">Меню на одного</span>
+									<span class="price-span">750 РУБ.</span></div>
+									<div class="block-two"><div class="foto-girl-two"></div><div class="wrap-span-price">
+									<span class="menu-on-two">Меню на двоих</span>
+									<span class="price-span-two">1250 РУБ.</span></div></div><button class="price-button1 connect">ЗАКАЗАТЬ</button>
+									</div>
+								</div>
+							</div>
+						<div class="col-xl-4 col-lg-4">
+						<div class="price-block2 price-block">
+							<div class="price-iner text-center">
+								<div class="top-price">
+									<div class="kalendar"></div>
+									<span class="during">НЕДЕЛЯ</span></div>
+									<div class="block-one">
+									<div class="foto-girl-one"></div><span class="menu-on-one">Меню на одного</span>
+									<span class="price-span">3750 РУБ.</span></div>
+									<div class="block-two"><div class="foto-girl-two"></div><div class="wrap-span-price">
+									<span class="menu-on-two">Меню на двоих</span>
+									<span class="price-span-two">6250 РУБ.</span></div></div><button class="price-button2 connect">ЗАКАЗАТЬ</button>
+									</div>
+								</div>
+							</div>
+						<div class="col-xl-4 col-lg-4">
+						<div class="price-block3 price-block">
+							<div class="price-iner text-center">
+								<div class="top-price">
+									<div class="kalendar"></div>
+									<span class="during">МЕСЯЦ</span></div>
+									<div class="block-one">
+									<div class="foto-girl-one"></div><span class="menu-on-one">Меню на одного</span>
+									<span class="price-span">15000 РУБ.</span></div>
+									<div class="block-two"><div class="foto-girl-two"></div><div class="wrap-span-price">
+									<span class="menu-on-two">Меню на двоих</span>
+									<span class="price-span-two">25000 РУБ.</span></div></div><button class="price-button1 connect">ЗАКАЗАТЬ</button>
+									</div>
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+
+
+
 	<div class="block7">
 		<div class="container">
 			<div class="row">
@@ -496,12 +553,12 @@
 				<!-- END Hidden Required Fields -->
 				<p>
 					<label for="name"></label>
-					<input type="text"  name="name" class="input-name" placeholder="Имя" required />
+					<input type="text"  name="name" class="input-name" placeholder="Имя" required oninvalid="setCustomValidity('Введите имя')" oninput="setCustomValidity('')" />
 				</p>
 
 				<p>
 					<label for="tel"></label>
-					<input type="tel" name="tel" class="input-tel" placeholder="Телефон" required />
+					<input type="tel" name="tel" class="input-tel" placeholder="Телефон" required oninvalid="setCustomValidity('Введите телефон')" oninput="setCustomValidity('')" />
 				</p>
 				<p class="last-p">
 					<label for="tel"></label>
