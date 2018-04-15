@@ -24,10 +24,10 @@ $(function() {
 		});
 	$(window).scroll(function() {
     var $top = $('.top-line'); // ID шапки
-    var $line = $('.composition')
+    var $marg = 40
     var wids = $(window).width();
-    if(wids > 380) {
-    if($(window).scrollTop() > $line.offset().top) { 
+    if(wids > 580) {
+    if($(window).scrollTop() > $marg) { 
         $top.addClass('fixed'); 
     } else {
         $top.removeClass('fixed'); 
@@ -43,7 +43,7 @@ $('.advice .sl').slick({
   slidesToScroll: 1,
   responsive: [
     {
-      breakpoint: 1200,
+      breakpoint: 992,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
@@ -92,7 +92,7 @@ $('.result .sl').slick({
     {
       breakpoint: 1200,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
         infinite: true,
         dots: false
