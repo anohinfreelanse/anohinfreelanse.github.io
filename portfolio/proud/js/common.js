@@ -26,11 +26,12 @@ $(".connect").click(function(){
   global_container.show();
   container.show();
 });
-if($(window).width() <= 768) {
+if($(window).width() < 768) {
 	$(".nav li").click(function(){
 		$(".nav").animate({
 			width: "toggle"
-		})
+		});
+		$(".container-button").removeClass('change');
 	})
 };
 $(window).scroll(function() {
