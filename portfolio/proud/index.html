@@ -39,7 +39,7 @@
 							</div>
 						</a>
 						<ul class="nav">
-							<li class="active-link menu1"><a href="#auto-oper">АВТОМАТИЗАЦИЯ РЕГИОНАЛЬНЫХ ОПЕРАТОРОВ ПО КОПИТАЛЬНОМУ РЕМОНТУ</a></li>
+							<li class="active-link menu1"><a href="#auto-oper">АВТОМАТИЗАЦИЯ РЕГИОНАЛЬНЫХ ОПЕРАТОРОВ ПО КАПИТАЛЬНОМУ РЕМОНТУ</a></li>
 							<li class="menu2"><a href="#auto-pay">АВТОМАТИЗАЦИЯ<br/> ПРИЕМА ПЛАТЕЖЕЙ</a></li>
 							<li class="menu3"><a href="#adventage">ПРЕИМУЩЕСТВА</a></li>
 							<li class="menu4"><a href="#our-clientage">С НАМИ РАБОТАЮТ</a></li>
@@ -69,6 +69,7 @@
 			<a id="auto-oper" class="link-height"></a>
 		</div>
 		<div class="auto-operator">
+			<img src="img/bg2.png" alt="bg2" class="auto-bg2">
 			<div class="container">
 				<div class="row">
 					<div class="col-xl-8 col-lg-8">
@@ -212,7 +213,7 @@
 			</div>
 		</div>
 		<div class="wrapper-link-height">
-			<a id="our-clientage" class="link-height"></a>
+			<a id="our-clientage" class="link-with"></a>
 		</div>
 		<div class="our-clientage">
 			<div class="container">
@@ -291,6 +292,11 @@
 		<div class="contact-wrapper">
 			<div class="sent-message sent-message-right">
 				<form class="form">
+					<!-- Hidden Required Fields -->
+					<input type="hidden" name="project_name" value="agama">
+					<input type="hidden" name="admin_email" value="anohinfreelance@gmail.com">
+					<input type="hidden" name="form_subject" value="Form Subject">
+					<!-- END Hidden Required Fields -->
 					<div>
 						<h1 class="form-h1">СВЯЗАТЬСЯ С НАМИ</h1>
 					</div>
@@ -299,28 +305,28 @@
 						<div class="col-xl-6 col-lg-6">
 							<div class="left-side">
 								<div class="name-line-form" for="">ФИО</div>
-								<input class="text-form" type="text" placeholder="Александров Александр Александрович">
+								<input class="text-form" autocomplete="0ff" type="text" placeholder="Александров Александр Александрович" required>
 							</div>
 							<div class="left-side">
 								<div class="name-line-form" for="">Контакты для связи - e-mail</div>
-								<input class="text-form" type="mail" placeholder="example@example.ru" required>
+								<input class="text-form" id="text1" class="input-mail" autocomplete="0ff" type="mail" placeholder="example@example.ru" required>
 							</div>
 							<div class="left-side left-side-tel">
 								<div class="name-line-form" for="">или телефон:</div>
-								<input class="text-form" id="phone1" type="text" placeholder="+7(__)__-_-_" required>
+								<input class="text-form" class="input-tele" id="phone1" type="text" placeholder="+7(__)__-_-_" required>
 							</div>
 						</div>
 						<div class="col-xl-6 col-lg-6">
 							<div class="right-side">
 								<div class="name-line-form" for="">ТЕМА:</div>
-								<input class="text-form" type="text" placeholder="Богатый Йорик">
+								<input class="text-form" autocomplete="0ff" type="text" placeholder="Богатый Йорик">
 							</div>
 							<div class="right-side">
 								<div class="name-line-form" for="">Комментарий:</div>
-								<textarea class="textaria-form" rows="30" type="textaria"></textarea>
+								<textarea class="textaria-form" rows="30" type="textaria" autocomplete="0ff" ></textarea>
 							</div>
 							<div class="block-button-form">
-								<button class="button-form">Отправить</button>
+								<button class="button-form" id="btn">Отправить</button>
 							</div>
 						</div>
 					</div>
@@ -362,7 +368,7 @@
 		<script src="js/scripts.min.js"></script>
 		<script src="js/jquery.maskedinput.min.js"></script>
 		<script>$(function(){
-  $("#phone1").mask("+7(999) 999-99-99");
-});</script>
-</body>
-</html>
+			$("#phone1").mask("+7(999) 999-99-99");
+		});</script>
+	</body>
+	</html>

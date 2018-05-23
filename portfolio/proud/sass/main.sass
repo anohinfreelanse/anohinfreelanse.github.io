@@ -21,10 +21,11 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 	input, textarea
-			border: #666 1px solid
+			border: none
 			outline: none
+			font-family: "PTSans-Regular"
 			&:focus:required:invalid
-				border-color: red
+				border: 3px solid #d3d600
 			&:required:valid
 				border-color: green
 
@@ -104,7 +105,10 @@ body
   	transition: 0.4s
 .link-height
 	position: absolute
-	top: -112px
+	top: -108px
+.link-with
+	position: absolute
+	top: -86px
 .wrapper-link-height
 	position: relative
 .change
@@ -129,9 +133,7 @@ body
 .auto-operator
 	padding-bottom: 55px
 	background-color: #d3d600
-	background-image: url("../img/bg2.jpg")
-	background-repeat: no-repeat
-	background-position: center center
+	position: relative
 .block-auto-operator
 	height: 192px
 	width: 91%
@@ -249,6 +251,10 @@ body
 	background-repeat: no-repeat
 	margin-left: auto
 	margin-right: auto
+.auto-bg2
+	position: absolute
+	top: -70px
+	left: 135px	
 .title-circle
 	font-family: "PFDinDisplayPro-Reg"
 	width: 222px
@@ -344,15 +350,16 @@ body
 	color: #999999
 .sprite-icon
 	background-image: url(../img/sprite.png)
-	width: 31px
+	width: 32px
 	height: 31px
 	display: inline-block
+	background-repeat: no-repeat
 .sprite-icon-facebook
 	background-position: 0 0
 .sprite-icon-in
-	background-position: 72px 0
+	background-position: -42px 0
 .sprite-icon-instagram
-	background-position: 31px 0
+	background-position: -84px 0
 .form
 	background-color: #ecebed
 	border: none
@@ -382,7 +389,8 @@ body
 	width: 100%
 	background-repeat: no-repeat
 	background-size: cover
-	background-position: center -97px
+	background-position: center -192px
+	height: 445px
 .name-title-abouy-company
 	background-color: #d3d600
 	text-align: center
@@ -400,8 +408,8 @@ body
 	text-align: center
 	margin-left: auto
 	margin-right: auto
-	height: 385px
-	margin-top: 175px
+	height: auto
+	margin-top: 75px
 .fon-advantage
 	background-image: url(../img/fon-advantage.jpg)
 	width: 100%
