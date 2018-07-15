@@ -12,7 +12,7 @@ body
 	position: relative
 	line-height: 1.65
 	font-family: "HelveticaNeueCyrMedium"
-	overflow-x: hidden
+	overflow-x: visible
 .text-center
 	text-align: center
 .header
@@ -101,7 +101,7 @@ body
 .actual-question
 	position: relative
 .icon-question
-	top: -10px
+	top: -15px
 	right: 13px
 	position: absolute
 .text-effect-eng
@@ -191,6 +191,26 @@ body
 		margin-bottom: 24px
 	span
 		color: #01395c
+.text-annotation
+	font-size: 14.5px
+	font-family: "HelveticaNeueCyrLight"
+	font-weight: bold
+	line-height: 1.4
+	margin-top: -14px	
+	text-align: justify
+	letter-spacing: -0.13px
+	span
+		font-family: "HelveticaNeueCyrMedium"
+		color: #01395c
+		padding-left: 18px
+.text-literal
+	font-size: 14.5px
+	font-family: "HelveticaNeueCyrLightItalic"
+	font-weight: bold
+	line-height: 1.4
+	margin-top: -14px	
+	text-align: justify
+	letter-spacing: -0.13px
 .picture-one
 	display: block
 	margin-left: auto
@@ -198,7 +218,7 @@ body
 	margin-top: 22px
 	margin-bottom: 40px
 .h2
-	font-size: 29px
+	font-size: 21px
 	color: #01395c
 	margin-top: 41px
 	margin-left: 16px
@@ -252,6 +272,7 @@ body
 .footer
 	background-image: url(../img/bg-bottom.png)
 	background-repeat: no-repeat
+	position: relative
 .apremilist-bottom
 	margin-top: -14px
 	letter-spacing: 0
@@ -310,18 +331,65 @@ body
 	background-color: #efefef
 	border-radius: 10px
 	width: 47%
-	height: 796px
 	position: absolute
 	left: 26.5%
 	z-index: 100
 	display: none
+	padding-left: 25px
+	padding-right: 25px
+	padding-bottom: 40px
+	.h2
+		margin-left: 4px
+		font-size: 21px
+		font-family: "HelveticaNeueCyrMedium"
+		margin-top: 20px
+	.title-line
+		margin-left: 4px
 .pop-up-literal
 	background-color: #efefef
 	border-radius: 10px
 	width: 47%
-	height: 330px
 	position: absolute
 	left: 26.5%
 	z-index: 100
 	display: none
+	padding-left: 25px
+	padding-right: 25px
+	padding-bottom: 40px
+	bottom: 220px
+	.h2
+		margin-left: 4px
+		font-size: 21px
+		font-family: "HelveticaNeueCyrMedium"
+		margin-top: 20px
+	.title-line
+		margin-left: 4px
+//zoom img
+.blokimg
+  position: static
+
+.overlay
+  display: none
+  height: auto
+  position: absolute
+  width: 100%
+  z-index: 999
+  left: 0
+  .overlay_container
+    display: table-cell
+    vertical-align: middle
+
+.overlay_container img
+  padding: 1px
+  -webkit-border-radius: 5px
+  -moz-border-radius: 5px
+  margin-left: auto
+  margin-right: auto
+  display: block
+
+.overlay:target
+  display: table
+.static
+	position: static
+
 @import "media" // Always at the end
