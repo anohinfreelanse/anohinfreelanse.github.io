@@ -175,11 +175,11 @@
 	right: 20px;
 }
 #simple-outer{
-	width: 98% !important;
-	left: 1% !important;
+	width: 50% !important;
+	left: 25% !important;
 	height: auto !important;
 }
 #simple-inner{
-	width: 98% !important;
+	width: 100% !important;
 	height: auto !important;
 }
