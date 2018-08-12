@@ -1,31 +1,145 @@
 @import "vars"
 
-
 /*==========  Desktop First  ==========*/
 
-// ≥1200px
-+media-breakpoint-down(lg)
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1281px)
+	.wrapper-screen .container-fluid
+		width: 1010px
+	.problem-solution
+		margin-left: 5px
+	.traditional-system
+		padding: 10px 18px
 
-// ≥992px
-+media-breakpoint-down(md)
 
-// ≥768px
-+media-breakpoint-down(sm)
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 1025px)
+	body
+		overflow: visible
+	.header
+		position: abstable
+		height: 55px
+		width: 100%
+		background-color: #181b2e
+		z-index: 49
+	.nav
+		display: none
+		z-index: 50
+	.wrapper-screen
+		height: auto
+		padding-left: 4%
+		padding-right: 4%
+		width: 100%
+	.wrapper-screen .container-fluid
+		height: auto
+		width: 100%
+	.wrapper-screen__yellow-block
+		margin-top: 80px
+	.profitable-terms
+		left: 0px
+	.buy-block
+		height: auto
+	.buy-tokens
+		margin-top: 55px
+	#touch-menu
+		display: block
+	.nav
+		left: auto
+		width: 295px
+		right: 0px
+		overflow: hidden
+		height: 825px
+		top: 0px
+		position: absolute
+	.nav__header-li-menu
+		white-space: nowrap
+		padding-bottom: 14px
+	.nav__logo
+		display: none
+	.nav__header-ul-menu
+		margin: 50px 0 20px 0
+	.nav__ru
+		display: none
+	.nav__eng
+		display: none
+	.nav-bottom__list-first-element
+		white-space: nowrap
+		overflow: hidden
+	.nav-bottom__list-two-element
+		white-space: nowrap
+		overflow: hidden
+	.more-information
+		display: none
+	.wrapper-screen__hidden
+		display: table
+		overflow: hidden
+		width: 250px
+	.wrapper-screen__hidden-two
+		display: table
+		overflow: hidden
+		width: 250px
+	.nav__nav-bottom
+		margin-top: 25px
+	.nav__logo_mobile
+		display: block
+		margin-left: 4%
+		position: relative
+		top: 12px
+	.wrapper-screen__change-point
+		position: relative
+		margin-top: 80px
+		bottom: auto
+	.img-token
+		width: 100%
+	.grafic .sl-slide
+		height: 490px
+		overflow: hidden
+	.block-confident
+		position: relative
+		bottom: auto
+		left: auto
+		margin-top: 170px
+		margin-bottom: 25px
+	.change-point__little-circle
+		margin-left: 12px
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
 
-// ≥576px
-+media-breakpoint-down(xs)
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
 
 
 /*==========  Mobile First  ==========*/
 
-// ≤576px
-+media-breakpoint-up(sm)
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
 
-// ≤768px
-+media-breakpoint-up(md)
 
-// ≤992px
-+media-breakpoint-up(lg)
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
 
-// ≤1200px
-+media-breakpoint-up(xl)
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
