@@ -1,32 +1,48 @@
 $(function() {
 
-$(document).ready(function(){
-	$(".nav").on("click","a", function (event) {
-		//отменяем стандартную обработку нажатия по ссылке
-		event.preventDefault();
-
-		//забираем идентификатор бока с атрибута href
-		var id  = $(this).attr('href'),
-
-		//узнаем высоту от начала страницы до блока на который ссылается якорь
-			top = $(id).offset().top;
-		
-		//анимируем переход на расстояние - top за 1500 мс
-		$('body,html').animate({scrollTop: top}, 800);
-	});
-});
-$(document).ready(function(){
-	$('a').click(function(){
-	$('.nav__link-menu').css("color","#41445b");
-	$(this).css("color","rgb(255,255,255)");
-});
+$(document).ready(function () {
+ 
+    function Scroll_block(){
+        var scroll_top = $(document).scrollTop();
+        $(".nav__header-li-menu a").each(function(){
+            var hash = $(this).attr("href");
+            var target = $(hash);
+            if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top) {
+                $(".right-fixed-menu li.active").parent().removeClass("active");
+                $(this).parent().addClass("active");
+            } else {
+                $(this).parent().removeClass("active");
+            }
+        });
+    }
+ 
+ 
+    $(document).on("scroll", Scroll_block);
+ 
+    $(".nav__link-menu").click(function(){
+ 		$('.nav__header-li-menu').removeClass("active");
+        $(document).off("scroll");
+        $(".nav__header-li-menu.active").parent().removeClass("active");
+        $(this).parent().addClass("active");
+        var hash = $(this).attr("href");
+        var target = $(hash);
+ 
+        $("html, body").animate({
+            scrollTop: target.offset().top
+        }, 1200, function(){
+            window.location.hash = hash;
+            $(document).on("scroll", Scroll_block);
+        });
+ 
+    });
+ 
 });
 $(window).bind('mousewheel', function(event) {
 if (event.originalEvent.wheelDelta >= 0) {
-    
+    window.scrollBy(0, -window.innerHeight)
 }
 else {
-    console.log('Scroll down');
+    window.scrollBy(0, window.innerHeight)
 }
 });
 $(document).ready(function(){
@@ -42,6 +58,8 @@ $(document).ready(function(){
 	})
 })
 $(document).ready(function(){
+	var wid = $(window).width()
+	if(wid > 480){
 	$('.questions__punct-three').click(function(){
 		$('.change-text-questions').css('display', 'none');
 		$('.change-text-questions3').css('display', 'block');
@@ -57,8 +75,22 @@ $(document).ready(function(){
 	$('.questions__punct-four').click(function(){
 		$('.change-text-questions').css('display', 'none');
 		$('.change-text-questions4').css('display', 'block');
+	});} else if (wid <= 480){
+	$('.questions__punct-three').click(function(){
+		$('.questions__toggle-text3').toggle();
 	});
+	$('.questions__punct-one').click(function(){
+		$('.questions__toggle-text1').toggle();
+	});
+	$('.questions__punct-two').click(function(){
+		$('.questions__toggle-text2').toggle();
+	});
+	$('.questions__punct-four').click(function(){
+		$('.questions__toggle-text4').toggle();
+	});
+	}
 })
+
 $(document).ready(function(){
 	$('.change-point__big-circle-one').click(function(){
 		$('.how-it-work-img').css('display', 'none');
@@ -137,18 +169,22 @@ $('.sl-team').slick({
     {
       breakpoint: 780,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1,
         infinite: false,
         dots: true
       }
     },
     {
-      breakpoint: 580,
+      breakpoint: 480,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        dots: true
+        dots: true,
+        arrows: false,
+        centerMode: true,
+        centerPadding: "10%",
+        infinite: true
       }
     }
     // You can unslick at a given breakpoint now by adding:
@@ -179,18 +215,21 @@ $('.about-us').slick({
     {
       breakpoint: 780,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1,
         infinite: false,
         dots: true
       }
     },
     {
-      breakpoint: 580,
+      breakpoint: 480,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        dots: true
+        dots: true,
+        arrows: false,
+        centerMode: true,
+        centerPadding: "10%"
       }
     }
     // You can unslick at a given breakpoint now by adding:
@@ -221,18 +260,22 @@ $('.grafic').slick({
     {
       breakpoint: 780,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1,
         infinite: false,
         dots: false
       }
     },
     {
-      breakpoint: 580,
+      breakpoint: 480,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        dots: false
+        dots: false,
+        arrows: false,
+        centerMode: true,
+        centerPadding: "10%",
+        infinite: false
       }
     }
     // You can unslick at a given breakpoint now by adding:
