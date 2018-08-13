@@ -11,7 +11,8 @@
 		margin-left: 5px
 	.traditional-system
 		padding: 10px 18px
-
+	.buy-tokens
+		padding: 7px 24px
 @media only screen and (max-height : 630px)
 	body
 		overflow: visible
@@ -30,11 +31,15 @@
 		width: 100%
 		overflow: visible
 	.header
-		position: fixed
+		position: absolute
 		height: 55px
 		width: 100%
-		background-color: #181b2e
 		z-index: 49
+	.fixed
+		position: fixed
+		background-color: #181b2e
+	.absolute
+		position: absolute
 	.nav
 		display: none
 		z-index: 50
@@ -114,14 +119,17 @@
 	body
 		overflow: visible
 	.header
-		position: fixed
+		position: absolute
 		height: 55px
 		width: 100%
-		background-color: #181b2e
 		z-index: 49
-	.nav
-		display: none
-		z-index: 50
+	.two-button
+		margin-left: 0
+	.fixed
+		position: fixed
+		background-color: #181b2e
+	.absolute
+		position: absolute
 	.wrapper-screen
 		height: auto
 		padding-left: 4%
@@ -144,10 +152,14 @@
 		left: auto
 		width: 295px
 		right: 0px
-		overflow: hidden
 		height: 825px
 		top: 0px
 		position: absolute
+		display: none
+		z-index: 50
+		overflow-y: auto
+		overflow-x: hidden
+		height: 100vh
 	.nav__header-li-menu
 		white-space: nowrap
 		padding-bottom: 14px
@@ -201,12 +213,12 @@
 		margin-left: 12px
 	.img-token
 		height: 400px
-/* Small Devices, Tablets */
-@media only screen and (max-width : 769px)
 	.value-buy
 		width: 100%
 	.wrapper-value-buy
 		width: 100%
+/* Small Devices, Tablets */
+@media only screen and (max-width : 769px)
 	.change-point__little-circle
 		margin-left: 4px
 	.img-token
