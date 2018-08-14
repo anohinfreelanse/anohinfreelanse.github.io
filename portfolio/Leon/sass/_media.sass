@@ -100,7 +100,9 @@
 		margin-top: 80px
 		bottom: auto
 	.img-token
-		width: 100%
+		display: block
+		margin-left: auto
+		margin-right: auto
 	.grafic .sl-slide
 		height: 490px
 		overflow: hidden
@@ -112,8 +114,6 @@
 		margin-bottom: 25px
 	.change-point__little-circle
 		margin-left: 12px
-	.img-token
-		height: 400px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 1025px)
 	body
@@ -123,6 +123,12 @@
 		height: 55px
 		width: 100%
 		z-index: 49
+	.header .nav__eng-mobile
+		display: block
+		padding: 3px 15px
+		margin-left: 22px
+		margin-top: 15px
+		position: relative
 	.two-button
 		margin-left: 0
 	.fixed
@@ -210,7 +216,7 @@
 		margin-top: 170px
 		margin-bottom: 25px
 	.change-point__little-circle
-		margin-left: 12px
+		margin-left: 5px
 	.img-token
 		height: 400px
 	.value-buy
@@ -321,8 +327,29 @@
 		.wrapper-screen__title-defult
 			padding-left: 8%
 			padding-right: 8%
+	#how-it-work
+		padding-right: 0
+		padding-left: 0
+		.wrapper-screen__title-defult
+			padding-left: 8%
+			padding-right: 8%
+	.wrapper-screen__change-text
+		width: 250px
+	.row-dont-see
+		display: none
+	.row-dont-see-devise
+		display: block
+	.wrapper-screen__number
+		margin-right: 10px
+		display: inline-block
+	.slide-circle
+		margin-right: 9px
+	.how-it-work-s .sl-slide .how-it-work-img
+		display: none
+	.how-it-work-s .slick-center .how-it-work-img
+		display: block
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 360px)
+@media only screen and (max-width : 400px)
 	.wrapper-screen__yellow-block
 		width: 241px
 		font-size: 16px
@@ -347,7 +374,17 @@
 		font-size: 30px
 	.wrapper-screen__change-text
 		font-size: 16px
-	
+	.logo__logo-text
+		font-size: 14.67px
+	.logo__background
+		background-image: url(../img/mobile-logo.png)
+		background-position: center center
+		width: 24px
+		height: 24px
+		margin-right: 7px
+	.nav__logo_mobile
+		position: relative
+		top: 19px
 @media only screen and (max-width : 320px)
 	.shadow-block_background-1
 		width: 100%
@@ -361,7 +398,11 @@
 		position: relative
 		width: 320px
 		left: -26px
-
+	.wrapper-screen__number
+		margin-right: 6px
+	.slide-circle
+		margin-right: 6px
+	
 /*==========  Mobile First  ==========*/
 
 /* Custom, iPhone Retina */

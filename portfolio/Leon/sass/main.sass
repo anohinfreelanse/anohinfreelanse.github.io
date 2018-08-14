@@ -708,7 +708,6 @@ button:focus
 	display: block
 	width: 232px
 	height: 44px
-	margin-right: 20px
 	background-color: #141726
 	color: #b1b4bc
 	font-family: 'roboto-example'
@@ -717,12 +716,16 @@ button:focus
 	padding-right: 10px
 	border: none
 	border-radius: 5px
-	float: left
-	margin-bottom: 20px
 	&::placeholder
 		color: #575a67
 		font-family: 'roboto-example'
 		font-size: 15px
+.wrapper-mine-form__input
+	margin-right: 20px
+	float: left
+	margin-bottom: 20px
+	position: relative
+	height: 45px
 .get-acces
 	color: #181b2e
 	font-family: 'roboto-example'
@@ -826,5 +829,32 @@ button:focus
 	color: #f3f6fc
 	font-size: 15px
 	font-family: 'roboto-example'
-
+.nav__eng-mobile
+	display: none
+.row-dont-see-devise
+	display: none
+.slide-circle
+	width: 7px
+	height: 7px
+	border-radius: 10px
+	background-color: #181b2e
+	display: inline-block
+	margin-right: 9px
+.wrapper-slide-circle
+	display: inline-block
+	position: relative
+	top: -7px
+.name-wrong
+	font-family: 'roboto-example'
+	font-size: 12px
+	color: #62667c
+	position: absolute
+	display: none
+label.error
+	font-family: 'roboto-example'
+	font-size: 12px
+	color: #62667c
+	display: block
+#form input.error
+	background-color: #261614
 @import "media" // Always at the end

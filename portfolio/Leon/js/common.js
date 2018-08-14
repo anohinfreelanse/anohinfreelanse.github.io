@@ -287,14 +287,50 @@ $('.grafic').slick({
 });
 });
 $(document).ready(function(){
+$('.how-it-work-s').slick({
+  dots: false,
+  infinite: false,
+  speed: 200,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  draggable: true,
+  responsive: [
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: false,
+        centerMode: true,
+        centerPadding: "8%",
+        infinite: false
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+    ]
+  
+});
+});
+$(document).ready(function(){
 			var touch = $('#touch-menu');
 		    var menu = $('.nav');
-
+		    var wid = $(window).width();
+			var hig = $(window).height();
   $(touch).click(function(){
     $(menu).animate({
       width: "toggle"
     });
   });
+  if (wid <= 1025 || hig <= 630) {
+  $('.nav__link-menu').click(function(){
+    $(menu).animate({
+      width: "toggle"
+    })
+    $('.container-button').removeClass('change')
+  });}
 
 		    $(window).resize(function(){
 		        var wid = $(window).width();
@@ -305,9 +341,11 @@ $(document).ready(function(){
         $('.a_remove').on('click', function(e){
   menu.removeAttr('style');
         $(".container-button").removeClass('change');
-});});
+});
+});
+
+
 $(document).ready(function(){
-	
 var wid = $(window).width();
 var hig = $(window).height();
 if (wid <= 1025 || hig <= 630) {
@@ -321,6 +359,65 @@ $(window).scroll(function() {
     } 
 });
 }; 
+});
+$(document).ready(function() {
+
+	//E-mail Ajax Send
+	$("#form").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "../mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			alert('Запрос отправлен')
+			setTimeout(function() {
+				// Done Functions
+				th.trigger("reset");
+			}, 1000);
+		});
+		return false;
+	});
+
+});
+$(document).ready(function(){
+	$.validator.addMethod(
+        "alphabetsOnly",
+        function(value, element, regexp) {
+            var re = new RegExp(regexp);
+            return this.optional(element) || re.test(value);
+        },
+        "Имя не должно содержать цифры"
+);
+$(".name").rules("add", {alphabetsOnly: "^[a-zA-Z'.\\s]$" })
+$(function(){
+ $('#form').validate({
+  rules: {
+ name: {
+ required: true,
+ minlength: 2,
+ alphabetsOnly: "^[a-zA-Z'.\\s]$"
+ },
+ tel: {
+ 	minlength: 10
+ }
+  },
+  messages: {
+ name: {
+ required: "Поле 'Имя' обязательно к заполнению",
+ minlength: "Введите не менее 2-х"
+ },
+ tel: {
+ minlength: "Введите корректный номер"
+ },
+ email: {
+ required: "Поле 'Email' обязательно к заполнению",
+ email: "Введите корректный email" 
+ },
+ url: "Поле 'Сайт' обязательно к заполнению"
+  }
+ });
+}); 
 });
 });
 
